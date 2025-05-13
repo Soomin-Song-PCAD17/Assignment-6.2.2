@@ -9,12 +9,13 @@
 /// Output: [0,0,9,0,0]
 /// 
 
-Demo([1, 2, 3]);
+Demo([1, 2, 3, 4]);
+Demo([-1, 1, 0, -3, 3]);
 
 void Demo(int[] arr)
 {
-    Console.WriteLine($"Input: [{string.Join(", ", arr)}]");
-    Console.WriteLine($"Output: [{string.Join(", ", ArrayProduct(arr))}]");
+    Console.WriteLine($"Input:  [{string.Join(", ", arr)}]");
+    Console.WriteLine($"Output: [{string.Join(", ", ArrayProduct(arr))}]\n");
 }
 
 int[] ArrayProduct(int[] arr)
