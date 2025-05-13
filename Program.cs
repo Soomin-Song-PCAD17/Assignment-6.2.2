@@ -21,16 +21,17 @@ void Demo(int[] arr)
 int[] ArrayProduct(int[] arr)
 {
     int[] prodArr = new int[arr.Length]; // Tracks the products of each iteration
-    Array.Fill(prodArr, 1); // Fill product array with ones
     int lProd = 1; // Tracks products to the left of index
     int rProd = 1; // Tracks products to right of index
 
+    // multiplies by left numbers
     for (int i = 0; i < arr.Length; i++)
     {
         prodArr[i] = lProd;
         lProd *= arr[i];
     }
     
+    // multiplies by right nubmers
     for (int i = arr.Length - 1; i >= 0; i--)
     {
         prodArr[i] *= rProd;
